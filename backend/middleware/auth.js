@@ -30,4 +30,4 @@ const authRoles = (...validRoles) =>{
     }
 }
 
-export default { authToken, authRoles };
+export { authToken, authRoles };

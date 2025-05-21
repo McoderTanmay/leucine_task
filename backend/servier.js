@@ -2,6 +2,7 @@ import express, { urlencoded } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import USER_ROUTES from "./routes/authRoutes.js";
+import SOFTWARE_ROUTES from "./routes/softwareRoutes.js";
 
 dotenv.config();
 
@@ -16,5 +17,6 @@ app.use(cors({
 }));
 
 app.use("/api/auth", USER_ROUTES);
+app.use("/api/software", SOFTWARE_ROUTES);
 
 export default app;
