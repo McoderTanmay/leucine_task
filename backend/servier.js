@@ -1,13 +1,13 @@
 import express, { urlencoded } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import "reflect-metadata"
+
 
 dotenv.config();
 
 const app = express();
 
-app.use(express.josn());
+app.use(express.json());
 app.use(urlencoded({extended:true}));
 
 app.use(cors({
@@ -15,6 +15,4 @@ app.use(cors({
     credentials: true
 }));
 
-app.listen(5000, ()=>{
-    console.log("Servier is running on port 5000");
-});
+export default app;
