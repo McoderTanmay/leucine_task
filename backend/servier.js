@@ -1,7 +1,7 @@
 import express, { urlencoded } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-
+import USER_ROUTES from "./routes/authRoutes.js";
 
 dotenv.config();
 
@@ -14,5 +14,7 @@ app.use(cors({
     origin:[" 192.168.224.1"],
     credentials: true
 }));
+
+app.use("/api/auth", USER_ROUTES);
 
 export default app;
