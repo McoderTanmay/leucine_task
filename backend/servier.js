@@ -20,6 +20,6 @@ app.use(cors({
 
 app.use("/api/auth", USER_ROUTES);
 app.use("/api/software", SOFTWARE_ROUTES);
-app.use("/app//requests", REQUEST_ROUTES);
+app.use("/api/requests", REQUEST_ROUTES);
 
 export default app;
